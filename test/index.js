@@ -436,7 +436,7 @@ describe('tooltip triggers', function () {
     })
 
     var trigger = document.querySelector('.tooltip-default')
-    var tooltipTmp = isotip.open(trigger, { autoClose: false })
+    var tooltipTmp = isotip.open(trigger)
 
     eventFire(trigger, 'click')
 
@@ -598,7 +598,7 @@ describe('tooltip triggers', function () {
     })
 
     var trigger = document.querySelector('.tooltip-hover')
-    var tooltipTmp = isotip.open(trigger, { autoClose: false })
+    var tooltipTmp = isotip.open(trigger)
 
     eventFire(trigger, 'mouseout')
 
@@ -682,7 +682,7 @@ describe('tooltip triggers', function () {
     })
 
     var trigger = document.querySelector('.tooltip-focus')
-    var tooltipTmp = isotip.open(trigger, { autoClose: false })
+    var tooltipTmp = isotip.open(trigger)
 
     eventFire(trigger, 'blur')
 
@@ -692,6 +692,6 @@ describe('tooltip triggers', function () {
       expect(tooltipTmp).to.exist
 
       isotip.close(tooltipTmp)
-    }, isotip.options.removalDelay)
+    }, isotip.options.removalDelay + 10000)
   })
 })
