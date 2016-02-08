@@ -457,7 +457,7 @@ describe('tooltip triggers', function () {
       expect(document.documentElement.contains(tooltipTmp)).to.be.ok
 
       done()
-    }, isotip.options.removalDelay + 1)
+    }, isotip.options.removalDelay * 10)
   })
 
   it('should not close a tooltip on click on a child element in toolip', function (done) {
